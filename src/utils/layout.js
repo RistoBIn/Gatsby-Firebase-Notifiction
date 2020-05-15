@@ -7,16 +7,6 @@ import SEO from './SEO';
 import '../styles/index.scss';
 
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("./firebase-messaging-sw.js")
-    .then(function(registration) {
-      console.log("Registration successful, scope is:", registration.scope);
-    })
-    .catch(function(err) {
-      console.log("Service worker registration failed, error:", err);
-    });
-}
 
 
 class Layout extends Component {
@@ -29,6 +19,17 @@ class Layout extends Component {
     const auth = import('firebase/auth');
     const database = import('firebase/database');
     const messaging = import('firebase/messaging');
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./firebase-messaging-sw.js")
+          .then(function(registration) {
+            console.log("Registration successful, scope is:", registration.scope);
+          })
+          .catch(function(err) {
+            console.log("Service worker registration failed, error:", err);
+          });
+      }
+
 
     Promise.all([app, auth, messaging, database]).then(values => {
       const firebase = getFirebase(values[0]);

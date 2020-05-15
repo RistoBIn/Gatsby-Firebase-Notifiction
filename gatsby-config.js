@@ -31,7 +31,12 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        importWorkboxFrom: `cdn`,
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
   ],
