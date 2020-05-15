@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { askForPermissioToReceiveNotifications } from '../../../utils/push-notification';
 
 class Landing extends Component {
   render() {
@@ -9,6 +10,9 @@ class Landing extends Component {
           The Landing Page is open to everyone, even though the user
           isn't signed in.
         </p>
+        <button onClick={askForPermissioToReceiveNotifications} >
+          Get Notification when click
+        </button>
       </div>
     );
   }
