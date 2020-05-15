@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import getFirebase, { withFirebase } from '../../../utils/Firebase';
+import { askForPermissioToReceiveNotifications } from '../../../utils/push-notification';
+
 import Input from '../../atoms/Input';
 import Button from '../../atoms/Button';
 import Loading from '../../atoms/Loading';
 import Image from '../../atoms/Image';
+
 
 class Home extends Component {
   _initFirebase = false;
@@ -26,20 +29,6 @@ class Home extends Component {
 
   componentDidMount() {
     this.firebaseInit();
-    const messaging = getFirebase().messaging;
-    let deviceToken = ""
-    messaging.requestPermission()
-      .then(async function() {
-        const token = await messaging.getToken();
-        console.log('token do usuário:', token);
-        deviceToken = token
-        return token;
-      })
-      .catch(function(err) {
-        console.log("Unable to get permission to notify.", err);
-      });
-    navigator.serviceWorker.addEventListener("message", (message) => console.log(message));
-    
   }
 
   componentDidUpdate() {
@@ -110,6 +99,9 @@ class Home extends Component {
 
     return (
       <div className="home container">
+        <button onClick={askForPermissioToReceiveNotifications} >
+          Get Notification when click
+        </button>
         <div className="home__details">
           <h1 className="home__title">Home Page</h1>
           <p className="home__description">

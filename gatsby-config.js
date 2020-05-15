@@ -21,7 +21,6 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `src/assets/icon.png`,
-        gcm_sender_id: "921558333196",
       },
     },
     {
@@ -32,11 +31,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-offline`,
+      resolve: `gatsby-plugin-firebase-messaging`,
       options: {
-        importWorkboxFrom: `cdn`,
-      },
+        config: { 
+          apiKey: 'AIzaSyA5TNI2M93v-iWUj1_eQTulCf308BDhX10',
+          appId: '1:921558333196:web:bb51f91a1ed2175119fb29',
+          messagingSenderId: '921558333196',
+          projectId: 'gatsby-firebase-notifica-ae4f4',
+        },
+      }
     },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
   ],
