@@ -10,6 +10,9 @@ class Landing extends Component {
           The Landing Page is open to everyone, even though the user
           isn't signed in.
         </p>
+        <h3>
+          Here is getting request token
+        </h3>
         <button onClick={askForPermissioToReceiveNotifications} >
           Get Notification when click
         </button>
