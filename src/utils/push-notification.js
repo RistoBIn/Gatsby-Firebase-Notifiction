@@ -3,11 +3,10 @@ import getFirebase from './Firebase';
 export const askForPermissioToReceiveNotifications = async () => {
   try {
   	const messaging = getFirebase().messaging;
+
     await messaging.requestPermission();
     const token = await messaging.getToken();
-    console.log('token do usuário:', token);
-    
-    return token;
+    console.log('token do----------', token);
   } catch (error) {
     console.error(error);
   }

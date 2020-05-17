@@ -25,32 +25,6 @@ const NavigationAuth = () => (
           <div className="navbar__link">
             <Link to={ACCOUNT}>Account</Link>
           </div>
-          <div className="navbar__link navbar__link--github">
-            <span className="navbar__link--github__a">
-              Created By{' '}
-              <a href="https://github.com/ovidiumihaibelciug">
-                Ovidiu Mihai Belciug
-              </a>
-            </span>
-            <div>
-              <iframe
-                src="https://ghbtns.com/github-btn.html?user=ovidiumihaibelciug&type=follow&count=true"
-                frameborder="0"
-                scrolling="0"
-                width="170px"
-                height="20px"
-              />
-            </div>
-            <div>
-              <iframe
-                src="https://ghbtns.com/github-btn.html?user=ovidiumihaibelciug&repo=gatsby-firebase-starter&type=star&count=true"
-                frameborder="0"
-                scrolling="0"
-                width="170px"
-                height="20px"
-              />
-            </div>
-          </div>
         </div>
       </div>
 

@@ -21,6 +21,7 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `src/assets/icon.png`,
+        gcm_sender_id: "921558333196",
       },
     },
     {
@@ -41,7 +42,6 @@ module.exports = {
         },
       }
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
   ],

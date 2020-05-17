@@ -21,7 +21,7 @@ class SignIn extends Component {
                 alt="logo"
               />
               <div className="login__content__header__title">
-                Gatsby + Firebase Starter
+                Gatsby + Firebase Notification
               </div>
             </div>
             <div className="login__content__login-form">
@@ -46,28 +46,6 @@ class SignIn extends Component {
                   <SignInFacebook />
                 </div>
               </div>{' '}
-              <div className="login__content__creator">
-                <div className="login__content__creator__inner">
-                  <div>
-                    <iframe
-                      src="https://ghbtns.com/github-btn.html?user=ovidiumihaibelciug&type=follow&count=true"
-                      frameborder="0"
-                      scrolling="0"
-                      width="170px"
-                      height="20px"
-                    />
-                  </div>
-                  <div>
-                    <iframe
-                      src="https://ghbtns.com/github-btn.html?user=ovidiumihaibelciug&repo=gatsby-firebase-starter&type=star&count=true"
-                      frameborder="0"
-                      scrolling="0"
-                      width="170px"
-                      height="20px"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="login__content__register">
               <SignUpLink isRegister />
