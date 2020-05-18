@@ -1,5 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 import 'firebase/firestore';
 import 'firebase/functions';
 import 'firebase/messaging';
@@ -18,7 +19,7 @@ class Firebase {
     /* Firebase APIs */
 
     this.auth = app.auth();
-    this.db = app.firestore();
+    this.db = app.firestore()
     this.functions = app.functions();
     this.messaging = app.messaging()
     /* Social Sign In Method Provider */
