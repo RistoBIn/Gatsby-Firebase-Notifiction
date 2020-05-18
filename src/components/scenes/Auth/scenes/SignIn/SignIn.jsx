@@ -21,7 +21,7 @@ class SignIn extends Component {
                 alt="logo"
               />
               <div className="login__content__header__title">
-                Gatsby + Firebase Notification
+                Carport + Notification
               </div>
             </div>
             <div className="login__content__login-form">

@@ -20,7 +20,7 @@ class SignUp extends Component {
                 alt="logo"
               />
               <div className="register__content__header__title">
-                Gatsby + Firebase Notification
+                Carport + Notification
               </div>
             </div>
             <div className="register__content__fields">
